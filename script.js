@@ -199,10 +199,8 @@ const ITEMS = [
     bio: 'تصميم الوضع الحالي لطريق الموقف',
     instagram: 'https://www.instagram.com/mosaad_hussien55?igsh=MWp6YmpqZ3BkOGN4Mg==',
     facebook: 'https://www.facebook.com/share/1JCxYSwuU1/'
-  },
-
+  }
 ];
-
 /* ============================================================
    CONFIG — التوقيتات بالميلي ثانية وإعدادات عامة
 ============================================================ */
