@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graduation Project</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="Css/style.css" />
+</head>
+
+<body>
+
+  <nav id="nav">
+    <div class="container">
+      <a href="#" class="logo">Graduation Project &nbsp;|&nbsp; Group 5</a>
+
+
+      <div class="site-nav">
+        <a href="#sec-home" class="nav-link">Home</a>
+        <a href="#sec-project" class="nav-link">Project</a>
+        <a href="#sec-team" class="nav-link">Team Project</a>
+        <a href="#sec-book" class="nav-link">The Book</a>
+        <button class="theme-toggle" id="themeToggle" title="تبديل وضع الإضاءة">
+          <i class="bx bx-sun" id="themeIcon"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="radial-nav" id="radialNav">
+    <button class="radial-trigger" id="radialTrigger" aria-label="Menu">
+      <i class="bx bx-plus" id="radialIconPlus"></i>
+      <i class="bx bx-x" id="radialIconX" style="display:none"></i>
+    </button>
+    <div class="radial-ring" id="radialRing">
+      <a href="#sec-home" class="radial-item" data-label="Home"><i class="bx bx-home-alt-2"></i></a>
+      <a href="#sec-project" class="radial-item" data-label="Project"><i class="bx bx-map-alt"></i></a>
+      <a href="#sec-team" class="radial-item" data-label="Team"><i class="bx bx-group"></i></a>
+      <a href="#sec-book" class="radial-item" data-label="The Book"><i class="bx bxs-book"></i></a>
+      <button class="radial-item" id="themeToggleMobile" data-label="Theme" style="cursor: pointer; outline: none;">
+        <i class="bx bx-sun" id="themeIconMobile"></i>
+      </button>
+    </div>
+  </div>
+
+  <section class="home" id="sec-home">
+    <video autoplay muted loop>
+      <source src="vid/media.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section class="top-gallery-section" id="sec-project">
+    <h2 class="section-heading">Project</h2>
+    <div class="top-gallery-container">
+      <div class="top-gallery-card" onclick="activateProjectMap(1)">
+        <img src="img/Project-Image/ibrahem/ibrahem/المحطة والجميل (2).png" alt="المحطة والجميل">
+        <div class="card-title-tag">محور المحطة</div>
+      </div>
+      <div class="top-gallery-card" onclick="activateProjectMap(2)">
+        <img src="img/Project-Image/ibrahem/ibrahem/الجميل وبنزيون (4).png" alt="الجميل وبنزيون">
+        <div class="card-title-tag">محور 23 يوليو</div>
+      </div>
+      <div class="top-gallery-card" onclick="activateProjectMap(3)">
+        <img src="img/Project-Image/ibrahem/ibrahem/بنزايون ومدينة العمال.png" alt="بنزايون ومدينة العمال">
+        <div class="card-title-tag">محور مستشفى الهلال</div>
+      </div>
+      <div class="top-gallery-card" onclick="activateProjectMap(4)">
+        <img src="img/Project-Image/ibrahem/ibrahem/الدولفين وطريق الموقف (3).png" alt="خارطة تفاصيل المشروع">
+        <div class="card-title-tag">محور الموقف</div>
+      </div>
+      <div class="top-gallery-card" onclick="activateProjectMap(5)">
+        <img src="img/Project-Image/ibrahem/ibrahem/طريق مستشفي العام.png" alt="المخطط الشامل للتصميم">
+        <div class="card-title-tag">محور مستشفى العام</div>
+      </div>
+    </div>
+    <div class="hologram">
+      <a href="hologram/slider.html" target="_blank" class="btn-download">
+        HOLOGRAM
+      </a>
+    </div>
+
+    <div class="click-hint-text"><i class="bx bx-tap animate-bounce"></i></div>
+
+    <div class="mindmap-modal-overlay" id="mindmapModal">
+      <div class="mindmap-screen-wrapper">
+
+        <button class="close-map-btn" onclick="closeProjectMap()"><i class="bx bx-x"></i></button>
+
+        <div class="mindmap-core-grid" id="mindmapGrid">
+
+          <!-- SVG خطوط التفريع — تغطي الـ grid كاملاً -->
+          <svg class="grid-connector-svg" id="gridConnectorSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+
+          <div class="map-panel pos-top-left border-purple" id="mp1">
+            <div class="mp-header"><i class="bx bx-map-pin"></i> <span id="panel-title-1">موقع العمل الميداني</span>
+            </div>
+            <div class="mp-body">
+              <h5 class="mp-title" id="panel-subtitle-1">العنوان الفرعي</h5>
+              <p class="mp-desc" id="panel-desc-1"></p>
+            </div>
+          </div>
+
+          <div class="map-panel pos-top-center border-red" id="mp2">
+            <div class="mp-header"><i class="bx bx-layer"></i> <span id="panel-title-2">مخططات وحسابات القطاع</span>
+            </div>
+            <div class="mp-body">
+              <p class="mp-desc" id="panel-desc-2"></p>
+            </div>
+          </div>
+
+          <div class="map-panel pos-top-right border-purple" id="mp3">
+            <div class="mp-header"><i class="bx bx-git-repo-forked"></i> <span id="panel-title-3">تفاصيل الرصف
+                الإنشائي</span></div>
+            <div class="mp-body">
+              <p class="mp-desc" id="panel-desc-3"></p>
+            </div>
+          </div>
+
+          <div class="map-panel pos-mid-left border-red" id="mp4">
+            <div class="mp-header"><i class="bx bx-data"></i> <span id="panel-title-4">طول وعرض المحور</span></div>
+            <div class="mp-body">
+              <p class="mp-desc" id="panel-desc-4"></p>
+            </div>
+          </div>
+
+          <div class="map-central-hub" id="mpHub">
+            <div class="hub-outer-glow-ring">
+              <div class="hub-inner-circle">
+                <img src="" id="centralHubImage" class="hub-dynamic-img" alt="الصورة النشطة">
+              </div>
+            </div>
+          </div>
+
+          <div class="map-panel pos-mid-right border-purple" id="mp5">
+            <div class="mp-header"><i class="bx bx-check-shield"></i> <span id="panel-title-5">السعة المرورية</span>
+            </div>
+            <div class="mp-body">
+              <p class="mp-desc" id="panel-desc-5"></p>
+            </div>
+          </div>
+
+          <div class="map-panel pos-bottom-left border-purple" id="mp6">
+            <div class="mp-header"><i class="bx bx-stats"></i> <span id="panel-title-6">إحصاءات وبيانات
+                القطاع</span>
+            </div>
+            <div class="mp-body">
+              <p class="mp-desc" id="panel-desc-6"></p>
+            </div>
+          </div>
+
+          <div class="map-panel pos-bottom-center border-red" id="mp7">
+            <div class="mp-header"><i class="bx bx-file"></i> <span id="panel-title-7">التقارير والمخرجات
+                الفنية</span>
+            </div>
+            <div class="mp-body">
+              <p class="mp-desc" id="panel-desc-7"></p>
+            </div>
+          </div>
+
+          <div class="map-panel pos-bottom-right border-purple" id="mp8">
+            <div class="mp-header"><i class="bx bx-info-circle"></i> <span id="panel-title-8">ملاحظات إضافية</span>
+            </div>
+            <div class="mp-body">
+              <p class="mp-desc" id="panel-desc-8"></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mindmap-footer-bar">
+          <h4 id="mainMapTitle">عنوان المخطط العام</h4>
+          <p id="mainMapSubtitle">اضغط على زر إغلاق بالركن للعودة إلى تصفح باقي عناصر الصفحة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- start slider -->
+  <section class="root" id="sec-team">
+    <h2 class="section-heading">Team Project</h2>
+    <div class="showcase">
+      <div class="showcase-bg"></div>
+      <div class="glow" id="glow"></div>
+
+      <div class="showcase-inner">
+
+        <!-- اليمين: الصورة المتحركة + البيو -->
+        <div class="feature-wrap" id="featureWrap">
+          <div class="img-perspective">
+            <div class="feat-img-box" id="featImgBox">
+              <img id="featImg" src="" alt="" />
+            </div>
+          </div>
+          <div class="feat-bio" id="featBio">
+            <div class="feat-role" id="featRole"></div>
+            <div class="feat-name" id="featName"></div>
+            <div class="feat-text" id="featText"></div>
+          </div>
+        </div>
+
+        <!-- الخط الفاصل -->
+        <div class="v-divider"></div>
+
+        <!-- الشمال: قائمة الفريق + custom scrollbar -->
+        <div class="team-panel-wrap">
+          <div class="team-panel" id="teamPanel"></div>
+          <div class="custom-scrollbar" id="customScrollbar">
+            <div class="custom-scrollbar-thumb" id="scrollThumb"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="prog-bar">
+      <div class="prog-fill" id="progFill"></div>
+    </div>
+    <div class="phase-lbl" id="phaseLbl"></div>
+
+    <div class="strip-section" id="stripSection">
+      <div class="strip-track" id="stripTrack"></div>
+    </div>
+  </section>
+  <!-- end slider -->
+
+  <section class="about-content" id="sec-book">
+    <h2 class="section-heading">The Book</h2>
+    <div class="about-inner">
+      <div class="about-image">
+        <div class="swiper bookSwiper">
+          <div class="swiper-wrapper" id="swiperRoll">
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-1.png" loading="lazy" decoding="async"
+                alt="صفحة 1" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-2.png" loading="lazy" decoding="async"
+                alt="صفحة 2" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-3.png" loading="lazy" decoding="async"
+                alt="صفحة 3" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-4.png" loading="lazy" decoding="async"
+                alt="صفحة 4" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-5.png" loading="lazy" decoding="async"
+                alt="صفحة 5" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-6.png" loading="lazy" decoding="async"
+                alt="صفحة 6" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-7.png" loading="lazy" decoding="async"
+                alt="صفحة 7" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-8.png" loading="lazy" decoding="async"
+                alt="صفحة 8" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-9.png" loading="lazy" decoding="async"
+                alt="صفحة 9" class="img-fluid"></div>
+            <div class="swiper-slide"><img src="Img/book/The-Book2026-10.png" loading="lazy" decoding="async"
+                alt="صفحة 10" class="img-fluid"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div>
+          <a href="Img/The Book2026.pdf" target="_blank" class="btn-download">
+            <i class="bx bxs-book"></i> Open The Book (PDF)
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Modal — صورة كاملة مع تفاصيل -->
+  <div class="member-modal" id="memberModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose"><i class="bx bx-x"></i></button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <div class="modal-role" id="modalRole"></div>
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-bio" id="modalBio"></div>
+        <div class="modal-socials">
+          <a id="modalInsta" href="#" target="_blank" class="modal-soc insta">
+            <i class="bx bxl-instagram"></i> Instagram
+          </a>
+          <a id="modalFb" href="#" target="_blank" class="modal-soc fb">
+            <i class="bx bxl-facebook-circle"></i> Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <!-- العمود الأول: اسم المشروع -->
+      <div class="footer-col footer-brand">
+        <a href="#sec-home" class="footer-logo">
+          Graduation Project<br><span>(Group 5)</span>
+        </a>
+      </div>
+
+      <!-- العمود الثاني: Quick Links -->
+      <div class="footer-col">
+        <p class="footer-col-title">Quick Links</p>
+        <div class="footer-nav">
+          <a href="#sec-home" class="footer-nav-link">Home</a>
+          <a href="#sec-project" class="footer-nav-link">Project</a>
+          <a href="#sec-team" class="footer-nav-link">Team Project</a>
+          <a href="#sec-book" class="footer-nav-link">The Book</a>
+        </div>
+      </div>
+
+      <!-- العمود الثالث: Contact Me -->
+      <div class="footer-col">
+        <p class="footer-col-title">Contact Me</p>
+        <p class="footer-phone">+20 1069415186</p>
+      </div>
+
+      <!-- العمود الرابع: Follow Me -->
+      <div class="footer-col">
+        <p class="footer-col-title">Follow Me</p>
+        <div class="footer-socials">
+          <a href="#" target="_blank" class="footer-soc fb">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+          <a href="#" target="_blank" class="footer-soc insta">
+            <i class="bx bxl-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span> Graduation Project (Group 5) , All rights reserved © 2026 .</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    /* ── رسم خطوط التفريع بين الـ Hub والمربعات بدقة ── */
+    function drawConnectors() {
+      const svg = document.getElementById('gridConnectorSvg');
+      const grid = document.getElementById('mindmapGrid');
+      const hub = document.getElementById('mpHub');
+      if (!svg || !grid || !hub) return;
+
+      const gRect = grid.getBoundingClientRect();
+      const hRect = hub.getBoundingClientRect();
+
+      // مركز الـ hub بالنسبة للـ grid
+      const hx = hRect.left + hRect.width / 2 - gRect.left;
+      const hy = hRect.top + hRect.height / 2 - gRect.top;
+
+      svg.setAttribute('width', gRect.width);
+      svg.setAttribute('height', gRect.height);
+      svg.setAttribute('viewBox', `0 0 ${gRect.width} ${gRect.height}`);
+      svg.innerHTML = '';
+
+      // إعداد الأزواج: [id المربع, لون الخط, نقطة وصول على المربع]
+      // نقطة الوصول: 'right' | 'left' | 'bottom' | 'top'
+      const panels = [
+        { id: 'mp1', color: '#a064ff', side: 'right' },
+        { id: 'mp2', color: '#e87cc3', side: 'bottom' },
+        { id: 'mp3', color: '#a064ff', side: 'left' },
+        { id: 'mp4', color: '#e87cc3', side: 'right' },
+        { id: 'mp5', color: '#a064ff', side: 'left' },
+        { id: 'mp6', color: '#a064ff', side: 'right' },
+        { id: 'mp7', color: '#e87cc3', side: 'top' },
+        { id: 'mp8', color: '#a064ff', side: 'left' },
+      ];
+
+      panels.forEach(({ id, color, side }) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+
+        // حساب نقطة الوصول على حافة المربع
+        let tx, ty;
+        if (side === 'right') { tx = r.right - gRect.left; ty = r.top + r.height / 2 - gRect.top; }
+        if (side === 'left') { tx = r.left - gRect.left; ty = r.top + r.height / 2 - gRect.top; }
+        if (side === 'top') { tx = r.left + r.width / 2 - gRect.left; ty = r.top - gRect.top; }
+        if (side === 'bottom') { tx = r.left + r.width / 2 - gRect.left; ty = r.bottom - gRect.top; }
+
+        // رسم خط L-shape: رأسي/أفقي حسب الاتجاه
+        let pts;
+        if (side === 'right' || side === 'left') {
+          // أفقي من المركز إلى نقطة X المربع، بعدين رأسي
+          pts = `${hx},${hy} ${tx},${hy} ${tx},${ty}`;
+        } else {
+          // رأسي من المركز إلى نقطة Y المربع، بعدين أفقي
+          pts = `${hx},${hy} ${hx},${ty} ${tx},${ty}`;
+        }
+
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        line.setAttribute('points', pts);
+        line.setAttribute('fill', 'none');
+        line.setAttribute('stroke', color);
+        line.setAttribute('stroke-width', '1.4');
+        line.setAttribute('stroke-dasharray', '5,3.5');
+        line.setAttribute('opacity', '0.8');
+        svg.appendChild(line);
+
+        // نقطة نهاية مضيئة على المربع
+        const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        dot.setAttribute('cx', tx);
+        dot.setAttribute('cy', ty);
+        dot.setAttribute('r', '3.5');
+        dot.setAttribute('fill', color);
+        dot.setAttribute('opacity', '0.9');
+        svg.appendChild(dot);
+      });
+    }
+
+    // تشغّل بعد كل فتح للـ modal
+    const _origActivate = window.activateProjectMap;
+    window.activateProjectMap = function (idx) {
+      _origActivate(idx);
+      setTimeout(drawConnectors, 50);
+    };
+    window.addEventListener('resize', drawConnectors);
+
+    /* ── Unified Theme Toggle ── */
+    const themeToggleDesktop = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
+    const themeIconDesktop = document.getElementById('themeIcon');
+    const themeIconMobile = document.getElementById('themeIconMobile');
+
+    function applyTheme(mode) {
+      const isLight = mode === 'light';
+      document.body.classList.toggle('light-mode', isLight);
+
+      // Update desktop icon & title
+      if (themeIconDesktop) {
+        themeIconDesktop.className = isLight ? 'bx bx-moon' : 'bx bx-sun';
+      }
+      if (themeToggleDesktop) {
+        themeToggleDesktop.title = isLight ? 'تبديل لوضع الليل' : 'تبديل لوضع النهار';
+      }
+
+      // Update mobile icon & title
+      if (themeIconMobile) {
+        themeIconMobile.className = isLight ? 'bx bx-moon' : 'bx bx-sun';
+      }
+      if (themeToggleMobile) {
+        themeToggleMobile.title = isLight ? 'تبديل لوضع الليل' : 'تبديل لوضع النهار';
+      }
+
+      localStorage.setItem('theme', mode);
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+
+    // Click listeners
+    [themeToggleDesktop, themeToggleMobile].forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const currentMode = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+          applyTheme(currentMode === 'light' ? 'dark' : 'light');
+        });
+      }
+    });
+
+
+    // smooth scroll للـ footer links
+    document.querySelectorAll('.footer-nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // footer logo → smooth scroll للأعلى
+    const footerLogo = document.querySelector('.footer-logo');
+    if (footerLogo) {
+      footerLogo.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+
+    /* ── Navbar — Smooth Scroll + Active Highlight ── */
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // smooth scroll عند الضغط
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // تحديد الـ active link بناءً على الـ section الظاهر
+    const sections = [
+      { id: 'sec-home', link: 'a[href="#sec-home"]' },
+      { id: 'sec-project', link: 'a[href="#sec-project"]' },
+      { id: 'sec-team', link: 'a[href="#sec-team"]' },
+      { id: 'sec-book', link: 'a[href="#sec-book"]' },
+    ];
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const match = document.querySelector(`a[href="#${entry.target.id}"]`);
+          if (match) match.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+
+    sections.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+
+    /* ── Mobile Radial Menu ── */
+    const radialTrigger = document.getElementById('radialTrigger');
+    const radialRing = document.getElementById('radialRing');
+    const iconPlus = document.getElementById('radialIconPlus');
+    const iconX = document.getElementById('radialIconX');
+    let radialOpen = false;
+
+    function openRadial() {
+      radialOpen = true;
+      radialRing.classList.add('open');
+      radialTrigger.classList.add('active');
+      iconPlus.style.display = 'none';
+      iconX.style.display = 'block';
+    }
+
+    function closeRadial() {
+      radialOpen = false;
+      radialRing.classList.remove('open');
+      radialTrigger.classList.remove('active');
+      iconPlus.style.display = 'block';
+      iconX.style.display = 'none';
+      // smooth scroll بعد إغلاق القائمة
+      setTimeout(() => {
+        document.querySelectorAll('.radial-item').forEach(item => {
+          item.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, { once: true });
+        });
+      }, 50);
+    }
+
+    radialTrigger && radialTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      radialOpen ? closeRadial() : openRadial();
+    });
+
+    // smooth scroll للـ radial items
+    document.querySelectorAll('.radial-item').forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        closeRadial();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+      });
+    });
+
+    // إغلاق عند الضغط برة
+    document.addEventListener('click', (e) => {
+      if (radialOpen && !e.target.closest('.radial-nav')) closeRadial();
+    });
+
+    const swiper = new Swiper('.bookSwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      direction: "vertical",
+    });
+
+    const HomeSec = document.querySelector('.home');
+    const HeadNav = document.getElementById('nav');
+    console.log(HeadNav.offsetHeight);
+
+    HomeSec.style.paddingTop = HeadNav.offsetHeight + 'px';
+
+
+
+  </script>
+</body>
+
+</html>
