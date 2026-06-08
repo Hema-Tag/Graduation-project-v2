@@ -9,7 +9,7 @@
 // start slider//
 const ITEMS = [
   {
-    img: 'Img/Team-Project/ibrahim-tag.webp',
+    img: 'imgs/Team-Project/ibrahim-tag.webp',
     name: 'Ibrahim Tag',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لمحور الدولفين',
@@ -17,7 +17,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1FY7ZHQkbu/'
   },
   {
-    img: 'Img/Team-Project/Abo-Bakr.webp',
+    img: 'imgs/Team-Project/Abo-Bakr.webp',
     name: 'Abo Bakr Ibrahim Abo Bakr',
     role: 'Geomatics',
     bio: 'تصميم اول اقتراح لحل مشكلة محور الدولفين',
@@ -25,7 +25,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/14fA32Rnyt7/'
   },
   {
-    img: 'Img/Team-Project/Abo-Elhassan.jpeg',
+    img: 'imgs/Team-Project/Abo-Elhassan.jpeg',
     name: 'Aboelhassan Mohamed Abdelraheem',
     role: 'Geomatics',
     bio: 'تصميم اول اقتراح لحل مشكلة محور الدولفين',
@@ -33,7 +33,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1EeKSVfN1m/'
   },
   {
-    img: 'Img/Team-Project/ahmed-abdou.webp',
+    img: 'imgs/Team-Project/ahmed-abdou.webp',
     name: 'Ahmed Abdelgafar Damarany',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لمحور المحطة ',
@@ -41,7 +41,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1D4rt9tJjx/'
   },
   {
-    img: 'Img/Team-Project/Youssef-Ragab.jpeg',
+    img: 'imgs/Team-Project/Youssef-Ragab.jpeg',
     name: 'Youssif Mohamed Ragab',
     role: 'Geomatics',
     bio: 'تصميم تاني اقتراح لحل مشكلة محور الدولفين',
@@ -49,7 +49,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/17XrBywEG1/'
   },
   {
-    img: 'Img/Team-Project/Abdo-Abdelati.jpeg',
+    img: 'imgs/Team-Project/Abdo-Abdelati.jpeg',
     name: 'Abdelati Adel Abdelati',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لمحور المحطة ',
@@ -57,7 +57,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1EU6LJfMof/'
   },
   {
-    img: 'Img/Team-Project/Amar-Kamal.jpeg',
+    img: 'imgs/Team-Project/Amar-Kamal.jpeg',
     name: 'Amar Kamal Omar',
     role: 'Geomatics',
     bio: 'تصميم تاني اقتراح لحل مشكلة محور الدولفين',
@@ -65,7 +65,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1DodBf9xkU/'
   },
   {
-    img: 'Img/Team-Project/Tarek-Kamal.jpeg',
+    img: 'imgs/Team-Project/Tarek-Kamal.jpeg',
     name: 'Tarek Kamal Abaas',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لمحور بنزايون',
@@ -73,7 +73,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1DqeiJ8xcR/?mibextid=wwXIfr'
   },
   {
-    img: 'Img/Team-Project/Ahmed-Adel.jpeg',
+    img: 'imgs/Team-Project/Ahmed-Adel.jpeg',
     name: 'Ahmed Adel Abdelaziz',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لمحور بنزايون',
@@ -81,7 +81,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1J5wRQ41wG/'
   },
   {
-    img: 'Img/Team-Project/Omar-Ahmed.jpeg',
+    img: 'imgs/Team-Project/Omar-Ahmed.jpeg',
     name: 'Omar Ahmed Mohamaden',
     role: 'Geomatics',
     bio: 'عمل جداول الاكسل وتنظيمها',
@@ -89,7 +89,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1CxffGUDV3/'
   },
   {
-    img: 'Img/Team-Project/Ahmed-Mahmoud.jpeg',
+    img: 'imgs/Team-Project/Ahmed-Mahmoud.jpeg',
     name: 'Ahmed Mahmoud Mohamed',
     role: 'Geomatics',
     bio: 'عمل جداول الاكسل وتنظيمها',
@@ -97,7 +97,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/14cTzLFkDA4/'
   },
   {
-    img: 'Img/Team-Project/ziad-zaza.webp',
+    img: 'imgs/Team-Project/ziad-zaza.webp',
     name: 'Ziad Hussni Saied',
     role: 'Geomatics',
     bio: 'تصميم حل مشكلة شارع الجميل ',
@@ -105,7 +105,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1am3inwe33/'
   },
   {
-    img: 'Img/Team-Project/moustafa-mahmoud.webp',
+    img: 'imgs/Team-Project/moustafa-mahmoud.webp',
     name: 'Moustafa Mahmoud Mustafa',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لمحور الدولفين',
@@ -113,7 +113,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/profile.php?id=61578335990233'
   },
   {
-    img: 'Img/Team-Project/Eslam-Barakat.jpeg',
+    img: 'imgs/Team-Project/Eslam-Barakat.jpeg',
     name: 'Eslam Barakat Abaas',
     role: 'Geomatics',
     bio: 'تصميم حل مشكلة شارع الجميل ',
@@ -121,7 +121,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/p/1GouauMf5u/'
   },
   {
-    img: 'Img/Team-Project/Ahmed-Mahana.jpeg',
+    img: 'imgs/Team-Project/Ahmed-Mahana.jpeg',
     name: 'Ahmed Mahana Ahmed',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لشارع 23 يوليو',
@@ -129,7 +129,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/189pSNyKeu/?mibextid=wwXIfr'
   },
   {
-    img: 'Img/Team-Project/Hamdan.jpeg',
+    img: 'imgs/Team-Project/Hamdan.jpeg',
     name: 'Hamdan Mohamed Hamdan',
     role: 'Geomatics',
     bio: 'ادخال الحصر المروري علي برنامج Infra Works',
@@ -137,7 +137,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1Ci21PQAiC/?mibextid=wwXIfr'
   },
   {
-    img: 'Img/Team-Project/Basha-Refa3y.jpeg',
+    img: 'imgs/Team-Project/Basha-Refa3y.jpeg',
     name: 'Basha Refa3y Basha',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لشارع الجميل',
@@ -145,7 +145,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/basha.refay'
   },
   {
-    img: 'Img/Team-Project/Beshoy.jpeg',
+    img: 'imgs/Team-Project/Beshoy.jpeg',
     name: 'Beshoy Aiad Ishaak',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لطريق الموقف',
@@ -153,7 +153,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/18by4L5whL/'
   },
   {
-    img: 'Img/Team-Project/Mohamed-Sayed.jpeg',
+    img: 'imgs/Team-Project/Mohamed-Sayed.jpeg',
     name: 'Mohamed Elsayed Abdelraheem',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لشارع 23 يوليو',
@@ -161,7 +161,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1BKHtKxLgL/'
   },
   {
-    img: 'Img/Team-Project/Mohamed-Kasem.jpeg',
+    img: 'imgs/Team-Project/Mohamed-Kasem.jpeg',
     name: 'Mohamed Kasem Mohamed',
     role: 'Geomatics',
     bio: 'ادخال الحصر المروري علي برنامج Infra Works',
@@ -169,7 +169,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1adjQbu2rA/?mibextid=wwXIfr'
   },
   {
-    img: 'Img/Team-Project/Mostafa-Kasem.jpeg',
+    img: 'imgs/Team-Project/Mostafa-Kasem.jpeg',
     name: 'Mostafa Kasem Mohamed',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لشارع مدينة العمال',
@@ -177,7 +177,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/17ytaV1Mnx/'
   },
   {
-    img: 'Img/Team-Project/Hamed-Mohamed.jpeg',
+    img: 'imgs/Team-Project/Hamed-Mohamed.jpeg',
     name: 'Hamed Mohamed Hamed',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لشارع مدينة العمال',
@@ -185,7 +185,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1HMq4DkJGC/'
   },
   {
-    img: 'Img/Team-Project/Abdllah-Mohamed.jpeg',
+    img: 'imgs/Team-Project/Abdllah-Mohamed.jpeg',
     name: 'Abdallah Mohamed Badwy',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لشارع الجميل',
@@ -193,7 +193,7 @@ const ITEMS = [
     facebook: 'https://www.facebook.com/share/1JZtFADW5D/'
   },
   {
-    img: 'Img/Team-Project/Mosad.jpeg',
+    img: 'imgs/Team-Project/Mosad.jpeg',
     name: 'Mosad Hessien Ibrahim',
     role: 'Geomatics',
     bio: 'تصميم الوضع الحالي لطريق الموقف',
