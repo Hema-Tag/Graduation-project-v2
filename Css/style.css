@@ -1932,48 +1932,108 @@ body.light-mode .top-gallery-card:hover .card-title-tag {
   font-size: 10px;
 }
 
-/* التجاوب والتكيف المميّز */
+/* =========================
+   MINDMAP MOBILE FIX
+========================= */
+
 @media (max-width: 920px) {
 
-  /* جعل الـ Grid يتراص عمودياً بشكل منظم وسهل القراءة على الهواتف والأجهزة اللوحية */
+  .mindmap-modal-overlay {
+    padding: 10px;
+  }
+
+  .mindmap-screen-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 55px 12px 20px;
+    border-radius: 16px;
+  }
+
   .mindmap-core-grid {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    align-items: stretch;
+    gap: 14px;
   }
 
-  /* إخفاء خطوط التوصيل SVG لأنها لا تناسب الترتيب العمودي */
-  .grid-connector-svg {
-    display: none !important;
-  }
-
-  /* إزالة قيود تموضع الشبكة عن الكروت والسماح بظهور كامل المحتوى */
-  .map-panel {
-    grid-column: auto !important;
-    grid-row: auto !important;
-    width: 100% !important;
-    max-height: none !important;
-  }
-
-  /* وضع الدائرة المركزية (الصورة النشطة) في الأعلى كعنوان مرئي */
   .map-central-hub {
-    grid-column: auto !important;
-    grid-row: auto !important;
     order: -1;
-    margin: 15px auto 25px;
+    margin: 0 auto 15px;
   }
 
   .hub-outer-glow-ring {
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
   }
 
-  /* تعديل البادنج والمساحات للـ wrapper */
-  .mindmap-screen-wrapper {
-    padding: 50px 18px 25px;
-    margin: 25px auto;
-    border-radius: 18px;
+  .hub-inner-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .map-panel {
+    width: 100% !important;
+    min-height: auto;
+  }
+
+  .mp-header {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .mp-title {
+    font-size: 14px;
+  }
+
+  .mp-desc {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .mp-body {
+    max-height: none;
+    overflow: scroll;
+  }
+
+  .mindmap-footer-bar {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .mindmap-footer-bar h4 {
+    font-size: 15px;
+  }
+
+  .mindmap-footer-bar p {
+    font-size: 12px;
+  }
+
+  .close-map-btn {
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* موبايلات صغيرة جداً */
+@media (max-width: 480px) {
+
+  .hub-outer-glow-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hub-inner-circle {
+    width: 82px;
+    height: 82px;
+  }
+
+  .mp-header {
+    font-size: 13px;
+  }
+
+  .mp-desc {
+    font-size: 12px;
   }
 }
 
